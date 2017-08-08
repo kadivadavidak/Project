@@ -1,0 +1,37 @@
+﻿<div>
+
+	<h2>List of Notes</h2>
+
+	<p>
+		<a href="/note/create">Create New</a>
+	</p>
+	<table>
+		<tr>
+			<th>
+				Text
+			</th>
+			<th>
+				CreatedTs
+			</th>
+			<th></th>
+		</tr>
+
+
+		<tr ng-repeat="n in vm.noteList">
+			<td>
+				{{n.text}}
+			</td>
+			<td>
+				{{n.createdTs | date:'MM/dd/yyyy hh:mm:ss a'}}
+			</td>
+			<td>
+				<a href='/note/edit/{{n.id}}'>Edit</a> |
+				<a href='/note/detail/{{n.id}}'>Details</a> |
+				<a href='/note/delete/{{n.id}}'>Delete</a>
+			</td>
+		</tr>
+
+
+	</table>
+
+</div>

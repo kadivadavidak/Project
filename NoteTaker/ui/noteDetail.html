@@ -1,0 +1,18 @@
+﻿
+<h2>Details</h2>
+
+<fieldset>
+	<legend>Note</legend>
+
+	<div class="display-label">Text</div>
+	<div class="display-field">{{vm.text}}</div>
+
+	<div class="display-label">CreatedTs</div>
+	<div class="display-field">{{vm.createdTs | date:'MM/dd/yyyy hh:mm:ss a'}}</div>
+</fieldset>
+<p>
+
+	<a href="/note/edit/{{vm.id}}">Edit</a> |
+	<a href="/note">Back to List</a>
+</p>
+

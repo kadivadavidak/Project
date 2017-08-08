@@ -1,0 +1,17 @@
+﻿
+<h2>Edit</h2>
+
+<fieldset>
+	<legend>Note</legend>
+
+	<div class="display-label">Text</div>
+	<textarea ng-model="vm.text"></textarea>
+
+	<div class="display-label">CreatedTs</div>
+	<div class="display-field">{{vm.createdTs | date:'MM/dd/yyyy hh:mm:ss a'}}</div>
+</fieldset>
+<p>
+
+	<input type="button" ng-click="save()" value="Save"> |
+	<a href="/note">Back to List</a>
+</p>

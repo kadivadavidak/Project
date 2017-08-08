@@ -1,0 +1,8 @@
+﻿<div>
+	<div id="logindisplay" ng-if="!vm.loggedon">
+		[ <a href="/logon">Log On</a> ]
+	</div>
+	<div id="logindisplay" ng-if="vm.loggedon">
+		Welcome <strong>{{vm.username}}</strong>! [ <a href="/logout">Log Off</a> ]
+	</div>
+</div>

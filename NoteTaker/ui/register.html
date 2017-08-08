@@ -1,0 +1,42 @@
+﻿<div>
+	<h2>Create a New Account</h2>
+	<p>
+		Use the form below to create a new account.
+	</p>
+	<p>
+		Passwords are required to be a minimum of 6 characters in length.
+	</p>
+	<div ng-if="vm.error" class="validation-summary-errors">{{vm.error}}</div>
+	<form name="regForm" novalidate>
+		<div>
+			<fieldset>
+				<legend>Account Information</legend>
+
+				<div class="editor-label">
+					<label for="UserName">User name</label>
+				</div>
+				<div class="editor-field">
+					<input data-val="true" ng-model="vm.userName" type="text" ng-required="true" />
+				</div>
+
+				<div class="editor-label">
+					<label for="Password">Password</label>
+				</div>
+				<div class="editor-field">
+					<input ng-model="vm.password" type="password" ng-minlength="6" ng-required="true" />
+				</div>
+
+				<div class="editor-label">
+					<label for="ConfirmPassword">Confirm password</label>
+				</div>
+				<div class="editor-field">
+					<input data-val="true" ng-model="vm.confirmPassword" type="password" ng-minlength="6" ng-required="true" />
+				</div>
+
+				<p>
+					<input type="button" value="Register" ng-click="register()" ng-disabled="regForm.$invalid || !(vm.password && vm.password == vm.confirmPassword)" />
+				</p>
+			</fieldset>
+		</div>
+	</form>
+</div>
